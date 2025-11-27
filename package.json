@@ -12,8 +12,8 @@
 		"precommit": "lint-staged",
 		"build": "node ./scripts/build.js",
 		"dev": "node ./scripts/dev.js",
-		"publish:upload-client": "pnpm --filter \"@momosemitsuki/request-lib\" publish --no-git-checks",
-		"publish:upload-server": "pnpm --filter \"@momosemitsuki/template-cli\" publish --no-git-checks",
+		"publish:request-lib": "pnpm --filter \"@momosemitsuki/request-lib\" publish --no-git-checks",
+		"publish:template-cli": "pnpm --filter \"@momosemitsuki/template-cli\" publish --no-git-checks",
 		"cli:test": "node ./packages/cli/dist/index.cjs"
 	},
 	"config": {
