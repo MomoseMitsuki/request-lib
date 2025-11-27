@@ -1,0 +1,75 @@
+{
+	"name": "@momosemitsuki/request-lib",
+	"version": "1.0.0",
+	"description": "",
+	"exports": {
+		".": {
+			"import": "./dist/index.esm.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./axios-imp": {
+			"import": "./dist/axios-imp.esm.js",
+			"types": "./dist/request-imp/request-axios-imp.d.ts"
+		},
+		"./xhr-imp": {
+			"import": "./dist/xhr-imp.esm.js",
+			"types": "./dist/request-imp/request-xhr-imp.d.ts"
+		},
+		"./fetch-imp": {
+			"import": "./dist/fetch-imp.esm.js",
+			"types": "./dist/request-imp/request-fetch-imp.d.ts"
+		},
+		"./store-imp": {
+			"import": "./dist/store-imp.esm.js",
+			"types": "./dist/request-store/index.d.ts"
+		}
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"engines": {
+		"node": ">=22.11.0",
+		"npm": ">=10.9.2",
+		"pnpm": ">=10.22.0"
+	},
+	"keywords": [],
+	"author": "MomoseMitsuki",
+	"license": "MIT",
+	"packageManager": "pnpm@10.22.0",
+	"buildOptions": {
+		"name": "MomoseMitsukiRequestLib",
+		"formats": [
+			"esm"
+		],
+		"entries": {
+			"index": "./request-core/index.ts",
+			"axios-imp": "./request-imp/request-axios-imp.ts",
+			"xhr-imp": "./request-imp/request-xhr-imp.ts",
+			"fetch-imp": "./request-imp/request-fetch-imp.ts",
+			"store-imp": "./request-store/index.ts"
+		},
+		"external": [
+			"axios"
+		]
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"spark-md5": "^3.0.2"
+	},
+	"peerDependencies": {
+		"axios": "^1.13.2"
+	},
+	"peerDependenciesMeta": {
+		"axios": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@types/spark-md5": "^3.0.5"
+	}
+}
