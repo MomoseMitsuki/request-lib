@@ -1,0 +1,30 @@
+{
+	"name": "@momosemitsuki/template-cli",
+	"version": "1.0.0",
+	"description": "",
+	"bin": {
+		"build:template": "node ./dist/index.cjs"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "MomoseMitsuki",
+	"license": "MIT",
+	"packageManager": "pnpm@10.22.0",
+	"buildOptions": {
+		"formats": [
+			"esm",
+			"cjs"
+		],
+		"entries": {
+			"index": "./init.ts"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	}
+}
