@@ -26,8 +26,7 @@ export default defineConfig(
 			"@typescript-eslint/no-unsafe-function-type": "off",
 			"@typescript-eslint/no-unused-expressions": "off",
 			"no-async-promise-executor": "off",
-			"no-var": "error",
-			"no-debugger": "off"
+			"no-var": "error"
 		}
 	},
 	// upload-client配置
