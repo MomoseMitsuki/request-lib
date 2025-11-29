@@ -44,13 +44,13 @@ pnpm add @momosemitsuki/request-lib         # pnpm
 
 ```typescript
 import { requestor } from "@momosemitsuki/request-lib/axios-imp"
-// 如果使用axios的实现记得下载axios哦
+// 如果使用axios的实现记得下载axios
 ```
 
 将来如果改为使用fetch api完成请求，仅需做以下改动：
 ```typescript
-- import { requestor } from 'request-axios-imp';
-+ import { requestor } from 'request-fetch-imp';
+- import { requestor } from '@momosemitsuki/request-lib/axios-imp';
++ import { requestor } from '@momosemitsuki/request-lib/fetch-imp';
 ```
 
 3. 注入请求实例对象
