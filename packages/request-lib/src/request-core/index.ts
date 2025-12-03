@@ -31,6 +31,9 @@ export abstract class BaseRequestor extends EventEmitter<RequestEvents> implemen
 		this._request(url, "PUT", { ...option, body: data });
 	public patch = (url: string, data?: any, option: RequestOptions = {}) =>
 		this._request(url, "PATCH", { ...option, body: data });
+	constructor() {
+		super();
+	}
 }
 
 let req: Requestor;

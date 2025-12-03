@@ -1,11 +1,11 @@
 {
 	"name": "@momosemitsuki/request-lib",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "",
 	"exports": {
 		".": {
 			"import": "./dist/index.esm.js",
-			"types": "./dist/index.d.ts"
+			"types": "./dist/request-core/index.d.ts"
 		},
 		"./axios-imp": {
 			"import": "./dist/axios-imp.esm.js",
