@@ -29,9 +29,13 @@ async function init() {
 	await generateApiFile(output, record, requestor, typescript);
 	const fileType = typescript ? "index.ts" : "index.js";
 	const indexPath = path.resolve(output, fileType);
-	await fs.promises.writeFile(indexPath, `export * from "./template/${fileType}"\n`, {
-		encoding: "utf-8"
-	});
+	await fs.promises.writeFile(
+		indexPath,
+		`export * from "./template/${typescript ? fileType.substring(0, fileType.length - 3) : fileType}"\n`,
+		{
+			encoding: "utf-8"
+		}
+	);
 	console.log(`✅ 构建完成`);
 }
 

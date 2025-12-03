@@ -53,7 +53,7 @@ export const generateApiFile = async (
 	let indexContent = "";
 	for (const fileName in record) {
 		let content = "";
-		indexContent += `export * from "./${fileName}";\n`;
+		indexContent += `export * from "./${typescript ? fileName.substring(0, fileName.length - 3) : fileName}";\n`;
 		const importRequestorStr = record[fileName]!.imports.size
 			? ", " + [...record[fileName]!.imports].join(", ")
 			: "";
