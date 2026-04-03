@@ -1,0 +1,35 @@
+{
+	"caseSensitive": false,
+	"dictionaries": ["custom-dictionary"],
+	"dictionaryDefinitions": [
+		{
+			"name": "custom-dictionary",
+			"path": "./.cspell/custom-dictionary.txt",
+			"addWords": true
+		}
+	],
+	"ignorePaths": [
+		"**/node_modules/**",
+        "**/html/**",
+		"**/dist/**",
+		"**/build/**",
+		"**/lib/**",
+		"**/docs/**",
+		"**/vendor/**",
+		"**/public/**",
+		"**/static/**",
+		"**/out/**",
+		"**/tmp/**",
+		"**/*.d.ts",
+		"**/package.json",
+		"**/*.md",
+		"**/stats.html",
+		"eslint.config.mjs",
+		".gitignore",
+		".prettierignore",
+		"cspell.json",
+		"commitlint.config.js",
+		".cspell",
+		"LICENSE"
+	]
+}

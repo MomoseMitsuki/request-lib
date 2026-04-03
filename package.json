@@ -1,0 +1,74 @@
+{
+	"name": "request-lib",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./axios": {
+			"import": "./dist/axios-imp.js",
+			"types": "./dist/request-imp/request-axios-imp.d.ts"
+		},
+		"./xhr": {
+			"import": "./dist/xhr-imp.js",
+			"types": "./dist/request-imp/request-xhr-imp.d.ts"
+		},
+		"./fetch": {
+			"import": "./dist/fetch-imp.js",
+			"types": "./dist/request-imp/request-fetch-imp.d.ts"
+		}
+	},
+	"scripts": {
+		"test": "vitest",
+		"build": "rollup -c",
+		"commit": "git-cz",
+		"lint": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\" && eslint && cspell lint \"**/*.{js,ts,mjs,cjs,json,css,less,scss,vue,html.md}\"",
+		"lint:eslint": "eslint",
+		"lint:prettier": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\"",
+		"lint:spellcheck": "cspell lint \"**/*.{js,ts,mjs,cjs,json,css,less,scss,vue,html.md}\""
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	},
+	"keywords": [],
+	"author": "MomoseMitsuki",
+	"license": "MIT",
+	"sideEffects": false,
+	"packageManager": "pnpm@10.24.0",
+	"devDependencies": {
+		"@commitlint/cli": "^20.5.0",
+		"@commitlint/config-conventional": "^20.5.0",
+		"@eslint/js": "^10.0.1",
+		"@rollup/plugin-commonjs": "^29.0.2",
+		"@rollup/plugin-node-resolve": "^16.0.3",
+		"@rollup/plugin-terser": "^1.0.0",
+		"@rollup/plugin-typescript": "^12.3.0",
+		"@types/node": "^25.5.0",
+		"@types/spark-md5": "^3.0.5",
+		"@vitest/ui": "4.1.2",
+		"commitizen": "^4.3.1",
+		"cspell": "^9.7.0",
+		"cz-git": "^1.12.0",
+		"eslint": "^10.1.0",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-prettier": "^5.5.5",
+		"husky": "^9.1.7",
+		"jsdom": "^29.0.1",
+		"msw": "^2.12.14",
+		"prettier": "^3.8.1",
+		"rollup": "^4.60.1",
+		"typescript": "^6.0.2",
+		"typescript-eslint": "^8.58.0",
+		"vitest": "^4.1.2"
+	},
+	"dependencies": {
+		"@rolldown/binding-win32-x64-msvc": "1.0.0-rc.12",
+		"spark-md5": "^3.0.2"
+	}
+}
