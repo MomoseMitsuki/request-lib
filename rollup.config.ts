@@ -6,6 +6,7 @@ import commonjs from "@rollup/plugin-commonjs";
 export default defineConfig({
 	input: {
 		index: "./src/index.ts",
+		"axios-imp": "./src/request-imp/request-axios-imp.ts",
 		"fetch-imp": "./src/request-imp/request-fetch-imp.ts",
 		"xhr-imp": "./src/request-imp/request-xhr-imp.ts"
 	},
