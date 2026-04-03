@@ -41,6 +41,9 @@
 		"type": "git",
 		"url": "https://github.com/MomoseMitsuki/request-lib.git"
 	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"keywords": [
 		"xhr",
 		"http",
