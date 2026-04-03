@@ -7,7 +7,8 @@ import {
 	createParallelRequestor,
 	createSerialRequestor,
 	createCacheRequestor,
-	createIdempotentRequestor
+	createIdempotentRequestor,
+	createAbortableRequestor
 } from "../../src/request-core";
 import { Requestor } from "../../src/request-imp/request-fetch-imp";
 
@@ -263,5 +264,17 @@ describe("测试 基于 fetch 封装的 createIdempotentRequestor", () => {
 			}
 		});
 		expect(n.status).toBe(200);
+	});
+});
+
+describe("测试 基于 fetch 封装的 createAbortableRequestor", () => {
+	it("测试能否正常取消", async () => {
+		const req = createAbortableRequestor();
+		req.get("/api/get").catch(err => {
+			expect(err.name).toBe("AbortError");
+			expect(err.code).toBe(20);
+			expect(err.message).toBe("This operation was aborted");
+		});
+		req.get("/api/get");
 	});
 });
