@@ -1,7 +1,7 @@
 {
 	"name": "request-lib",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Adapt all request scenarios encountered in project development, such as concurrent requests, sequential execution, idempotency, and caching.",
 	"main": "index.js",
 	"type": "module",
 	"exports": {
@@ -25,6 +25,7 @@
 	"scripts": {
 		"test": "vitest",
 		"build": "rollup -c",
+		"prepare": "husky",
 		"commit": "git-cz",
 		"lint": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\" && eslint && cspell lint \"**/*.{js,ts,mjs,cjs,json,css,less,scss,vue,html.md}\"",
 		"lint:eslint": "eslint",
@@ -36,10 +37,32 @@
 			"path": "node_modules/cz-git"
 		}
 	},
-	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MomoseMitsuki/request-lib.git"
+	},
+	"keywords": [
+		"xhr",
+		"http",
+		"ajax",
+		"promise",
+		"node",
+		"browser",
+		"fetch",
+		"rest",
+		"api",
+		"client"
+	],
 	"author": "MomoseMitsuki",
 	"license": "MIT",
 	"sideEffects": false,
+	"bugs": {
+		"url": "https://github.com/MomoseMitsuki/request-lib/issues"
+	},
+	"files": [
+		"dist",
+		"LICENSE"
+	],
 	"packageManager": "pnpm@10.24.0",
 	"devDependencies": {
 		"@commitlint/cli": "^20.5.0",
