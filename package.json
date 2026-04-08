@@ -1,6 +1,6 @@
 {
 	"name": "@momosemitsuki/request-lib",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Adapt all request scenarios encountered in project development, such as concurrent requests, sequential execution, idempotency, and caching.",
 	"main": "index.js",
 	"type": "module",
